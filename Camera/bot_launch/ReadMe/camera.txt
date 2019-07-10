@@ -1,0 +1,24 @@
+1. Camera Initializations
+
+	rosparam set usb_cam/video_device /dev/video1
+	
+	launch file
+		roslaunch bot_launch cam_launch.launch
+	OR the next two nodes
+
+		rosrun usb_cam usb_cam_node
+
+		rosrun image_view image_view image:=/usb_cam/image_raw
+
+2. Robot Pose 
+
+		rosrun bot_launch Perspective_Transformation_lite.py
+
+
+4. visualization
+
+		rosrun image_transport republish compressed in:=/image_comp raw out:=/image_raw
+		
+		rosrun bot_launch visualize.py
+
+		rosrun image_view image_view image:=/image
