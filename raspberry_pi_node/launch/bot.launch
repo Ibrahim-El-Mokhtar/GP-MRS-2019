@@ -1,0 +1,6 @@
+<launch>
+  <node name="navigationYellow" pkg="raspberry_pi" type="gotoGoal_navMultiPath.py" >
+  </node>
+ <node name="localPlannerYellow" pkg="raspberry_pi" type="localPlannerAPF_YELLOW.py" >
+  </node> 
+</launch>
